@@ -16,6 +16,76 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏗️</text></svg>"
     />
+
+    <!--
+      Lightweight styles for the new quick-nav row and the Teaching section.
+      These are scoped to new classes only, so they won't conflict with
+      stylesheet.css. Feel free to move these into stylesheet.css later.
+    -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .section-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+        margin-top: 0.75rem;
+      }
+
+      .section-nav a {
+        font-size: 0.85rem;
+        text-decoration: none;
+        opacity: 0.8;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        padding: 0.25rem 0.75rem;
+      }
+
+      .section-nav a:hover {
+        opacity: 1;
+      }
+
+      .pub-subhead {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        font-size: 0.85rem;
+        opacity: 0.7;
+      }
+
+      .teach-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .teach-institution {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .teach-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .teach-list li {
+        padding: 0.35rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .teach-list a {
+        text-decoration: none;
+      }
+
+      .teach-list a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
   <body>
@@ -28,47 +98,59 @@
           </h1>
 
           <p class="hero-tagline" style="text-align: center">
-            Applied AI/ML Researcher | Ph.D. | Assistant Professor
+            Assistant Professor | Ph.D. | Applied AI/ML Researcher
           </p>
 
           <br />
 
           <p>
             I am currently serving as an
-            <b>Assistant Professor of Construction Management</b> at Eastern
-            Illinois University's School of Technology. I received my Ph.D. from
-            Virginia Polytechnic Institute and State University's Myers-Lawson
-            School of Construction.
+            <b>
+              <a
+                href="https://www.eiu.edu/technology/faculty.php?id=rly"
+                target="_blank"
+              >
+                Assistant Professor of Construction Management
+              </a>
+            </b>
+            at Eastern Illinois University's School of Technology. I received my
+            Ph.D. from Virginia Polytechnic Institute and State University's
+            Myers-Lawson School of Construction.
           </p>
 
           <p>
-            My dissertation research explores the application of generative AI,
-            blockchain, and decentralized governance in smart building
-            facilities management — examining how decentralized decision-making
-            within facilities management operations works in building
-            cyber-physical systems, and how physical space can be owned and
-            operated in the future using generative AI and web3 technology.
+            My
+            <a
+              href="https://vtechworks.lib.vt.edu/items/805c2d21-d304-4753-8989-c4552da61c31"
+              target="_blank"
+              >dissertation</a
+            >
+            research explores the application of generative AI, blockchain, and
+            decentralized governance in smart building facilities management —
+            examining how decentralized decision-making within facilities
+            management operations works in building cyber-physical systems, and
+            how physical space can be owned and operated in the future using
+            generative AI and web3 technology.
           </p>
 
-          <p>
-            My current research focuses on data analytics, digital innovation,
-            and the application of emerging technologies in the built
-            environment. My primary research interests are
-            <strong>
-              human–AI interaction, mixed reality technology, blockchain,
-              generative AI
-            </strong>
-            (large language models and vision-language models),
-            <strong>
-              human–robot interaction, digital twins and smart cities, smart and
-              autonomous buildings, machine learning </strong
-            >, and the <strong>Internet of Things</strong>.
-          </p>
+          <h3>Research Interest</h3>
+
+          <ul>
+            <li>Edge AI with Small Language Model</li>
+            <li>
+              Vision-Language Models (VLMs), and Large Language Models (LLMs)
+            </li>
+            <li>Smart Buildings and Smart Cities</li>
+            <li>Human-Computer Interaction and Mixed Reality (MR)</li>
+            <li>Human-Building Interaction</li>
+            <li>Construction Robotics</li>
+            <li>Blockchain Technologies and Cybersecurity</li>
+          </ul>
 
           <nav class="hero-links">
             <a href="mailto:lyreachsak@gmail.com">Email</a>
 
-            <a href="http://reachsak.github.io/files/resume.pdf">CV</a>
+            <a href="http://reachsak.github.io/files/reachsak.pdf">CV</a>
 
             <a
               href="https://scholar.google.com/citations?user=cC-f6WoAAAAJ&hl=en&authuser=1"
@@ -90,17 +172,32 @@
 
             <a href="https://built-lab.github.io/">BUILT Lab</a>
           </nav>
+
+          <br />
+
+          <!-- ===== Quick section-jump nav (auto-scrolls to sections below) ===== -->
+          <nav class="section-nav">
+            <a href="#education">Education &amp; Appointments</a>
+            <a href="#funding">Research Funding</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#publications">Selected Publications</a>
+            <a href="#teaching">Teaching</a>
+          </nav>
         </div>
 
         <div class="hero-side">
           <a href="images/profile.png">
-            <img class="hero-photo" alt="Reachsak Ly" src="images/az.jpg" />
+            <img
+              class="hero-photo"
+              alt="Reachsak Ly"
+              src="images/profile.png"
+            />
           </a>
         </div>
       </header>
 
       <!-- ===================== Education & Appointments ==================== -->
-      <section class="section">
+      <section class="section" id="education">
         <span class="section-label">Background</span>
 
         <h2 class="section-title">Education &amp; Appointments</h2>
@@ -117,8 +214,8 @@
             <div class="intern-company">Eastern Illinois University</div>
 
             <div class="intern-role">
-              Assistant Professor, Construction Management — School of
-              Technology
+              Assistant Professor (Tenure Track), Construction Management —
+              School of Technology
             </div>
           </div>
         </div>
@@ -161,13 +258,11 @@
         </div>
       </section>
 
-      <!-- ==================== Funding & IP =================== -->
-      <section class="section">
-        <span class="section-label"> Funding &amp; IP </span>
+      <!-- ==================== Research Funding =================== -->
+      <section class="section" id="funding">
+        <span class="section-label"> Funding </span>
 
-        <h2 class="section-title">
-          Research Funding &amp; Intellectual Property
-        </h2>
+        <h2 class="section-title">Research Funding</h2>
 
         <div class="fund-box">
           <span class="fund-tag"> 2026 · Grant </span>
@@ -181,12 +276,25 @@
             Construction Technology Education · Award: $2,500
           </div>
         </div>
+      </section>
+
+      <!-- ==================== Intellectual Property =================== -->
+      <!-- ==================== Intellectual Property =================== -->
+      <section class="section" id="ip">
+        <span class="section-label"> IP </span>
+
+        <h2 class="section-title">Intellectual Property</h2>
 
         <div class="fund-box">
           <span class="fund-tag"> 2025 · Approved </span>
 
           <div class="fund-title">
-            Decentralized Autonomous Building Cyber-Physical System (DAB-CPS)
+            <a
+              href="https://vtip.technologypublisher.com/techcase/25-144"
+              target="_blank"
+            >
+              Decentralized Autonomous Building Cyber-Physical System (DAB-CPS)
+            </a>
           </div>
 
           <div class="fund-desc">
@@ -199,8 +307,13 @@
           <span class="fund-tag"> 2025 · Approved </span>
 
           <div class="fund-title">
-            LLM-Based Autonomous Building Operations and Virtual Assistants for
-            Smart Buildings
+            <a
+              href="https://vtip.technologypublisher.com/techcase/25-143"
+              target="_blank"
+            >
+              LLM-Based Autonomous Building Operations and Virtual Assistants
+              for Smart Buildings
+            </a>
           </div>
 
           <div class="fund-desc">
@@ -211,21 +324,23 @@
       </section>
 
       <!-- ==================== Research / Publications =================== -->
-      <section class="section">
+      <section class="section" id="publications">
         <span class="section-label"> Research </span>
 
-        <h2 class="section-title">Selected Publications</h2>
+        <h2 class="section-title">Project and Publications</h2>
 
-        <div class="pub-year">2025</div>
+        <!-- ---------------- Journal Articles ---------------- -->
+        <div class="pub-subhead">Journal Articles</div>
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study1.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study1.png"
+                alt="Decentralized Autonomous Organizations in Built Environments: Applications, Potentials and Limitations"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -243,7 +358,6 @@
 
             <div class="pub-link">
               <a href="https://doi.org/10.1007/s10257-025-00699-1"> [DOI] </a>
-
               <a href="#"> [BibTeX] </a>
             </div>
           </div>
@@ -251,44 +365,13 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
-          </div>
-
-          <div class="pub-content">
-            <div class="pub-title">
-              Smart Building Operations and Virtual Assistants Using LLM
-            </div>
-
-            <div class="pub-authors">
-              <b>Reachsak Ly</b>, Alireza Shojaei, Xinghua Gao
-            </div>
-
-            <div class="pub-venue">
-              33rd ACM Symposium on Foundations of Software Engineering (FSE
-              2025), Trondheim, Norway · DOI:10.1145/3696630.3728706
-            </div>
-
-            <div class="pub-link">
-              <a href="https://doi.org/10.1145/3696630.3728706"> [DOI] </a>
-
-              <a href="#"> [BibTeX] </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study4.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study4.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -316,12 +399,45 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
+            <a href="images/study21.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study21.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              SmartHomeSecure: Automated Detection and Repair of Smart Home
+              Configuration Errors Using Large Language Models
+              <span class="status"> Under Review </span>
             </div>
+
+            <div class="pub-authors">
+              Yizhi Wang , Xinghua Gao, <b>Reachsak Ly</b> , Alireza Shojaei
+            </div>
+
+            <div class="pub-venue">
+              Journal of Building Engineering · Preprint: arXiv:2607.06748
+            </div>
+
+            <div class="pub-link">
+              <a href="https://arxiv.org/pdf/2607.06748"> [arXiv] </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study3.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study3.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -346,12 +462,13 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study5.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study5.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -379,12 +496,13 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study6.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study6.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -412,12 +530,13 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study7.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study7.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -429,24 +548,23 @@
             </div>
 
             <div class="pub-authors">
-              MohammadHossein Heydari, Hossein Naderi,
-              <b>Reachsak Ly</b>, Alireza Shojaei
+              MohammadHossein Heydari, Hossein Naderi, <b>Reachsak Ly</b>,
+              Alireza Shojaei
             </div>
 
             <div class="pub-venue">Innovative Higher Education (Submitted)</div>
           </div>
         </div>
 
-        <div class="pub-year">2024</div>
-
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study8.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study8.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -468,7 +586,6 @@
               <a href="https://doi.org/10.1080/15623599.2024.2304475">
                 [DOI]
               </a>
-
               <a href="#"> [BibTeX] </a>
             </div>
           </div>
@@ -476,12 +593,170 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
+            <a href="images/study9.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study9.png"
+                alt="Autonomous Construction Safety Incentive Mechanism Using
+              Blockchain-Enabled Tokens and Vision-Based Techniques"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              Autonomous Construction Safety Incentive Mechanism Using
+              Blockchain-Enabled Tokens and Vision-Based Techniques
             </div>
+
+            <div class="pub-authors">
+              Hossein Naderi, Alireza Shojaei, <b>Reachsak Ly</b>
+            </div>
+
+            <div class="pub-venue">
+              Automation in Construction, Vol. 153 ·
+              DOI:10.1016/j.autcon.2023.104959
+            </div>
+
+            <div class="pub-link">
+              <a href="https://doi.org/10.1016/j.autcon.2023.104959"> [DOI] </a>
+              <a href="#"> [BibTeX] </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study10.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study10.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              Virtual Site Visits in Construction Management Education: A
+              Practical Alternative to Physical Site Visits
+            </div>
+
+            <div class="pub-authors">
+              Alireza Shojaei, <b>Reachsak Ly</b>, Saeed Rokooei, Amirsamman
+              Mahdavian, Ahmed AlBayati
+            </div>
+
+            <div class="pub-venue">
+              Journal of Information Technology in Construction (ITcon) ·
+              DOI:10.36680/j.itcon.2023.036
+            </div>
+
+            <div class="pub-link">
+              <a href="https://doi.org/10.36680/j.itcon.2023.036"> [DOI] </a>
+              <a href="#"> [BibTeX] </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------------- Conference Proceedings ---------------- -->
+        <div class="pub-subhead">Conference Proceedings</div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study11.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study11.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              Smart Building Operations and Virtual Assistants Using LLM
+            </div>
+
+            <div class="pub-authors">
+              <b>Reachsak Ly</b>, Alireza Shojaei, Xinghua Gao
+            </div>
+
+            <div class="pub-venue">
+              33rd ACM Symposium on Foundations of Software Engineering (FSE
+              2025), Trondheim, Norway · DOI:10.1145/3696630.3728706
+            </div>
+
+            <div class="pub-link">
+              <a href="https://doi.org/10.1145/3696630.3728706"> [DOI] </a>
+              <a href="#"> [BibTeX] </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study12.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study12.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              AVATAR: AI-Assisted Virtual Assistant and Augmented Twin for
+              Advanced Real-Time Smart Building Facilities Management
+              <span class="status"> Accepted </span>
+            </div>
+
+            <div class="pub-authors"><b>Reachsak Ly</b></div>
+
+            <div class="pub-venue">
+              2026 ATMAE Annual Conference, New Orleans, LA · Oral Presentation
+              · Submission ID 32
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study13.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study13.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              Edge AI for Human-Building Interaction and Smart Building
+              Operations with Small Language Models
+              <span class="status"> Accepted </span>
+            </div>
+
+            <div class="pub-authors"><b>Reachsak Ly</b></div>
+
+            <div class="pub-venue">
+              2026 ATMAE Annual Conference, New Orleans, LA · Poster
+              Presentation · Submission ID 33.0
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study14.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study14.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -501,7 +776,6 @@
 
             <div class="pub-link">
               <a href="https://doi.org/10.1061/9780784485262.081"> [DOI] </a>
-
               <a href="#"> [BibTeX] </a>
             </div>
           </div>
@@ -509,12 +783,13 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study15.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study15.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -534,7 +809,6 @@
 
             <div class="pub-link">
               <a href="https://doi.org/10.1061/9780784485262.031"> [DOI] </a>
-
               <a href="#"> [BibTeX] </a>
             </div>
           </div>
@@ -542,12 +816,13 @@
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study16.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study16.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -571,85 +846,15 @@
           </div>
         </div>
 
-        <div class="pub-year">2023</div>
-
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
-          </div>
-
-          <div class="pub-content">
-            <div class="pub-title">
-              Autonomous Construction Safety Incentive Mechanism Using
-              Blockchain-Enabled Tokens and Vision-Based Techniques
-            </div>
-
-            <div class="pub-authors">
-              Hossein Naderi, Alireza Shojaei, <b>Reachsak Ly</b>
-            </div>
-
-            <div class="pub-venue">
-              Automation in Construction, Vol. 153 ·
-              DOI:10.1016/j.autcon.2023.104959
-            </div>
-
-            <div class="pub-link">
-              <a href="https://doi.org/10.1016/j.autcon.2023.104959"> [DOI] </a>
-
-              <a href="#"> [BibTeX] </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
-          </div>
-
-          <div class="pub-content">
-            <div class="pub-title">
-              Virtual Site Visits in Construction Management Education: A
-              Practical Alternative to Physical Site Visits
-            </div>
-
-            <div class="pub-authors">
-              Alireza Shojaei, <b>Reachsak Ly</b>, Saeed Rokooei, Amirsamman
-              Mahdavian, Ahmed AlBayati
-            </div>
-
-            <div class="pub-venue">
-              Journal of Information Technology in Construction (ITcon) ·
-              DOI:10.36680/j.itcon.2023.036
-            </div>
-
-            <div class="pub-link">
-              <a href="https://doi.org/10.36680/j.itcon.2023.036"> [DOI] </a>
-
-              <a href="#"> [BibTeX] </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-year">2021</div>
-
-        <div class="pub-box">
-          <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study17.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study17.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -673,16 +878,15 @@
           </div>
         </div>
 
-        <div class="pub-year">2020</div>
-
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study18.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study18.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -705,53 +909,19 @@
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ==================== Reports & Posters =================== -->
-      <section class="section">
-        <span class="section-label"> Reports </span>
-
-        <h2 class="section-title">Research Reports &amp; Posters</h2>
+        <!-- ---------------- Research Reports ---------------- -->
+        <div class="pub-subhead">Research Reports</div>
 
         <div class="pub-box">
           <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
-          </div>
-
-          <div class="pub-content">
-            <div class="pub-title">
-              Autonomous Building Operations and Virtual Assistants Using
-              Generative AI
-            </div>
-
-            <div class="pub-authors">
-              <b>Reachsak Ly</b>
-            </div>
-
-            <div class="pub-venue">
-              Poster · 2025 Paul E. Torgersen Graduate Student Research
-              Excellence Award, Virginia Tech, Blacksburg, VA
-            </div>
-
-            <div class="pub-link">
-              <a href="#"> [PDF] </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-media">
-            <div class="pub-placeholder">
-              <span>
-                Image / GIF<br />
-                placeholder
-              </span>
-            </div>
+            <a href="images/study19.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study19.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
           </div>
 
           <div class="pub-content">
@@ -765,12 +935,123 @@
               Iorio, Alireza Shojaei
             </div>
 
-            <div class="pub-venue">Research Report, 2024</div>
+            <div class="pub-venue">Research Report</div>
 
             <div class="pub-link">
               <a href="#"> [PDF] </a>
             </div>
           </div>
+        </div>
+
+        <!-- ---------------- Poster Presentations ---------------- -->
+        <div class="pub-subhead">Poster Presentations</div>
+
+        <div class="pub-box">
+          <div class="pub-media">
+            <a href="images/study20.png" target="_blank" rel="noopener">
+              <img
+                class="pub-image"
+                src="images/study20.png"
+                alt="Autonomous Building Cyber-Physical Systems"
+              />
+            </a>
+          </div>
+
+          <div class="pub-content">
+            <div class="pub-title">
+              Autonomous Building Operations and Virtual Assistants Using
+              Generative AI
+            </div>
+
+            <div class="pub-authors">
+              <b>Reachsak Ly</b>
+            </div>
+
+            <div class="pub-venue">
+              2025 Paul E. Torgersen Graduate Student Research Excellence Award,
+              Virginia Tech, Blacksburg, VA
+            </div>
+
+            <div class="pub-link">
+              <a href="#"> [PDF] </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== Teaching =================== -->
+      <section class="section" id="teaching">
+        <span class="section-label"> Teaching </span>
+
+        <h2 class="section-title">Teaching</h2>
+
+        <div class="teach-group">
+          <div class="teach-institution">Eastern Illinois University</div>
+
+          <ul class="teach-list">
+            <li>
+              <a href="syllabi/cmg1000.pdf">
+                CMG 1000 – Introduction to Construction Management
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/cmg2223.pdf">
+                CMG 2223 – Print Reading and Introduction to Building
+                Information Management (BIM)
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/cmg3833.pdf">
+                CMG 3833 – Sustainable Buildings
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/cmg4223.pdf">
+                CMG 4223 – Construction Cost Estimating
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/cmg4243.pdf">
+                CMG 4243 – Construction Project Management Capstone
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/egt3063.pdf"> EGT 3063 – 3D Modeling </a>
+            </li>
+            <li>
+              <a href="syllabi/tec5143.pdf">
+                TEC 5143 – Research in Technology
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="teach-group">
+          <div class="teach-institution">Virginia Tech (TA)</div>
+
+          <ul class="teach-list">
+            <li>
+              <a href="syllabi/bc4434.pdf">
+                BC 4434 – Construction Practice I
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/bc4444.pdf">
+                BC 4444 – Construction Practice II (Capstone Project)
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/bc4164.pdf">
+                BC 4164 – Process Planning and Production Design for
+                Construction
+              </a>
+            </li>
+            <li>
+              <a href="syllabi/bc5984.pdf">
+                BC 5984 – Decision-Making and Risk Management
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 

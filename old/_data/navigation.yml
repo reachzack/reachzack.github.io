@@ -1,0 +1,35 @@
+# main links links
+main:
+  - title: "Home"
+    url: /about/
+
+  - title: "Research"
+    url: /portfolio/
+
+  - title: "Publications"
+    url: /publication/
+
+  - title: "Teaching"
+    url: http://reachsak.github.io/files/teaching.pdf
+    
+  - title: "CV"
+    url: http://reachsak.github.io/files/reachsak.pdf
+
+  - title: "Resume"
+    url: http://reachsak.github.io/files/resume.pdf
+    
+  - title: "Research Lab"
+    url: https://built-lab.github.io/
+    
+  - title: "Project"
+    url: https://reachsak.github.io/files/projectlist.pdf
+
+  - title: "Presentation"
+    url: /markdown/
+
+  
+  -  #title: "Talk"
+    #url: /talks/https://reachsak.github.io/files/projectlist.pdf
+
+  -  #title: "Blog Posts"
+    #url: /year-archive/

@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reachsak Ly</title>
+    <meta
+      name="description"
+      content="Reachsak Ly — Assistant Professor of Construction Management, Eastern Illinois University."
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap");
+
+      :root {
+        --ink: #17171a;
+        --ink-soft: #454550;
+        --ink-faint: #84848c;
+        --paper: #ffffff;
+        --line: #e7e5df;
+        --accent: #9a3324;
+        --tile: #faf9f6;
+        --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+        --sans:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --maxw: 760px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 72px 24px 100px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--serif);
+        font-weight: 500;
+        color: var(--ink);
+        margin: 0 0 0.3em;
+        letter-spacing: -0.01em;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h3.sec {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 8px;
+      }
+      h2.sec-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.1em;
+      }
+      p {
+        color: var(--ink-soft);
+        margin: 0 0 1em;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid var(--line);
+        margin: 52px 0;
+      }
+
+      /* header */
+      .subtitle {
+        font-size: 1.02rem;
+        color: var(--ink-faint);
+        margin-bottom: 1.4em;
+      }
+      .linkrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 4px;
+        margin-bottom: 2.2em;
+      }
+      .linkrow a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        padding: 6px 13px;
+        border-radius: 999px;
+      }
+      .linkrow a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .header-flex {
+        display: flex;
+        gap: 36px;
+        align-items: flex-start;
+        margin-bottom: 2em;
+      }
+      .header-flex .photo {
+        flex: none;
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        background: var(--tile);
+        border: 1px solid var(--line);
+      }
+
+      /* education / experience timeline */
+      .exp-item {
+        display: flex;
+        gap: 16px;
+        padding: 16px 0;
+        border-top: 1px solid var(--line);
+      }
+      .exp-item:first-child {
+        border-top: none;
+      }
+      .exp-badge {
+        flex: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--tile);
+        border: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--serif);
+        font-size: 0.95rem;
+        color: var(--accent);
+      }
+      .exp-item h3 {
+        font-size: 1.02rem;
+        margin-bottom: 0.1em;
+        font-family: var(--sans);
+        font-weight: 600;
+      }
+      .exp-item .org {
+        font-size: 0.88rem;
+        color: var(--ink-soft);
+      }
+      .exp-item .date {
+        font-size: 0.8rem;
+        color: var(--ink-faint);
+        margin-top: 2px;
+      }
+
+      /* publications */
+      .pub-year {
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        color: var(--accent);
+        margin: 28px 0 10px;
+      }
+      .pub-year:first-of-type {
+        margin-top: 0;
+      }
+      .pub {
+        padding: 14px 0;
+        border-top: 1px dashed var(--line);
+      }
+      .pub:first-child {
+        border-top: none;
+      }
+      .pub .ttl {
+        font-size: 1rem;
+        color: var(--ink);
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+      .pub .authors {
+        font-size: 0.87rem;
+        color: var(--ink-soft);
+      }
+      .pub .authors b {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .pub .venue {
+        font-size: 0.83rem;
+        color: var(--ink-faint);
+        margin-top: 2px;
+      }
+      .pub .links {
+        margin-top: 6px;
+      }
+      .pub .links a {
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-right: 14px;
+      }
+      .status {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        border-radius: 5px;
+        background: #f4e6e1;
+        color: var(--accent);
+        margin-left: 6px;
+      }
+
+      /* funding / IP tiles */
+      .tile {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--tile);
+        padding: 18px 20px;
+        margin-bottom: 14px;
+      }
+      .tile .tag {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 6px;
+      }
+      .tile h3 {
+        font-size: 0.98rem;
+        font-family: var(--sans);
+        font-weight: 600;
+        margin-bottom: 0.25em;
+      }
+      .tile p {
+        font-size: 0.88rem;
+        margin: 0;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--ink-faint);
+        font-size: 0.82rem;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 560px) {
+        .header-flex {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .linkrow {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- ============ HEADER ============ -->
+      <div class="header-flex">
+        <img class="photo" src="profile.png" alt="Reachsak Ly" />
+        <div>
+          <h1>Reachsak Ly</h1>
+          <p class="subtitle">Assistant Professor of Construction Management</p>
+          <p class="subtitle">Eastern Illinois University</p>
+          <div class="linkrow">
+            <a href="mailto:lyreachsak@gmail.com">Email</a>
+            <a href="http://reachsak.github.io/files/reachsak.pdf">CV</a>
+            <a href="http://reachsak.github.io/files/resume.pdf">Resume</a>
+            <a
+              href="https://scholar.google.com/citations?user=cC-f6WoAAAAJ&hl=en&authuser=1"
+              >Google Scholar</a
+            >
+            <a href="https://orcid.org/my-orcid?orcid=0000-0003-0332-1312"
+              >ORCID</a
+            >
+            <a href="https://www.researchgate.net/profile/Reachsak-Ly"
+              >ResearchGate</a
+            >
+            <a href="https://github.com/reachsak">Github</a>
+            <a href="https://www.linkedin.com/in/reachsak">LinkedIn</a>
+            <a href="https://built-lab.github.io/">BUILT Lab</a>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        I am currently serving as an
+        <strong>Assistant Professor of Construction Management</strong> at
+        Eastern Illinois University's School of Technology. I received my Ph.D.
+        from Virginia Polytechnic Institute and State University's Myers-Lawson
+        School of Construction.
+      </p>
+
+      <p>
+        My dissertation research explores the application of generative AI,
+        blockchain, and decentralized governance in smart building facilities
+        management — examining how decentralized decision-making within
+        facilities management operations works in building cyber-physical
+        systems, and how physical space can be owned and operated in the future
+        using generative AI and web3 technology.
+      </p>
+
+      <p>
+        My current research focuses on data analytics, digital innovation, and
+        the application of emerging technologies in the built environment. My
+        primary research interests are human–AI interaction, mixed reality
+        technology, blockchain, generative AI (large language models and
+        vision-language models), human–robot interaction, digital twins and
+        smart cities, smart and autonomous buildings, machine learning, and the
+        Internet of Things.
+      </p>
+
+      <hr />
+
+      <!-- ============ EDUCATION ============ -->
+      <h3 class="sec">Background</h3>
+      <h2 class="sec-title">Education &amp; Appointments</h2>
+
+      <div class="exp-item">
+        <div class="exp-badge">EIU</div>
+        <div>
+          <h3>Assistant Professor, Construction Management</h3>
+          <div class="org">
+            School of Technology, Eastern Illinois University
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-badge">VT</div>
+        <div>
+          <h3>Ph.D., Myers-Lawson School of Construction</h3>
+          <div class="org">
+            Virginia Polytechnic Institute and State University (Virginia Tech)
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-badge">ZJU</div>
+        <div>
+          <h3>
+            B.Eng. Civil Engineering, Structural Engineering specialization
+          </h3>
+          <div class="org">
+            Zhejiang University · Undergraduate Research Assistant, deep
+            learning for structural health monitoring
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- ============ RESEARCH FUNDING & IP ============ -->
+      <h3 class="sec">Funding &amp; IP</h3>
+      <h2 class="sec-title">Research Funding &amp; Intellectual Property</h2>
+
+      <div class="tile">
+        <span class="tag">2026 · Grant</span>
+        <h3>Redden Grant · Eastern Illinois University</h3>
+        <p>
+          Generative AI-Powered Human-Robot Collaboration Demonstration for
+          Construction Technology Education · Award: $2,500
+        </p>
+      </div>
+
+      <div class="tile">
+        <span class="tag">2025 · Approved</span>
+        <h3>
+          Decentralized Autonomous Building Cyber-Physical System (DAB-CPS)
+        </h3>
+        <p>
+          Reachsak Ly, Alireza Shojaei — Virginia Tech IP Disclosure · Invention
+          ID: INV2025-123
+        </p>
+      </div>
+
+      <div class="tile">
+        <span class="tag">2025 · Approved</span>
+        <h3>
+          LLM-Based Autonomous Building Operations and Virtual Assistants for
+          Smart Buildings
+        </h3>
+        <p>
+          Reachsak Ly, Alireza Shojaei — Virginia Tech IP Disclosure · Invention
+          ID: INV2025-121
+        </p>
+      </div>
+
+      <hr />
+
+      <!-- ============ PUBLICATIONS ============ -->
+      <h3 class="sec">Research</h3>
+      <h2 class="sec-title">Selected Publications</h2>
+
+      <div class="pub-year">2025</div>
+
+      <div class="pub">
+        <div class="ttl">
+          Decentralized Autonomous Organizations in Built Environments:
+          Applications, Potentials and Limitations
+        </div>
+        <div class="authors"><b>Reachsak Ly</b>, Alireza Shojaei</div>
+        <div class="venue">
+          Information Systems and eBusiness Management Journal ·
+          DOI:10.1007/s10257-025-00699-1
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.1007/s10257-025-00699-1">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Smart Building Operations and Virtual Assistants Using LLM
+        </div>
+        <div class="authors">
+          <b>Reachsak Ly</b>, Alireza Shojaei, Xinghua Gao
+        </div>
+        <div class="venue">
+          33rd ACM Symposium on Foundations of Software Engineering (FSE 2025),
+          Trondheim, Norway · DOI:10.1145/3696630.3728706
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.1145/3696630.3728706">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Autonomous Building Cyber-Physical Systems Using Decentralized
+          Autonomous Organizations, Digital Twins, and Large Language
+          Models<span class="status">Under Review</span>
+        </div>
+        <div class="authors">
+          <b>Reachsak Ly</b>, Alireza Shojaei, Xinghua Gao, Philip Agee, Abiola
+          Akanmu
+        </div>
+        <div class="venue">
+          Automation in Construction (Revision Submitted) · Preprint:
+          arXiv:2410.19262
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2410.19262">arXiv</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Public and Private Blockchain for Decentralized Digital Building Twins
+          and Building Automation Systems<span class="status"
+            >Under Review</span
+          >
+        </div>
+        <div class="authors"><b>Reachsak Ly</b>, Alireza Shojaei</div>
+        <div class="venue">
+          Information Systems and eBusiness Management (Submitted)
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Data-Driven and Distributed Governance of Building Facilities
+          Management Using DAO, Digital Twin, and LLMs<span class="status"
+            >Under Review</span
+          >
+        </div>
+        <div class="authors">
+          <b>Reachsak Ly</b>, Alireza Shojaei, Abiola Akanmu, Xinghua Gao,
+          Philip Agee
+        </div>
+        <div class="venue">Frontiers of Engineering Management (Submitted)</div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          DAO and Blockchain-Based Incentivization Framework for Community-Based
+          Facilities Management<span class="status">Under Review</span>
+        </div>
+        <div class="authors">
+          <b>Reachsak Ly</b>, Alireza Shojaei, Xinghua Gao, Philip Agee, Abiola
+          Akanmu
+        </div>
+        <div class="venue">Information Systems Frontiers (Submitted)</div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Industry Perspectives on the Role of Education Programs in Supporting
+          Construction Diversity and Inclusion in U.S. Construction<span
+            class="status"
+            >Under Review</span
+          >
+        </div>
+        <div class="authors">
+          MohammadHossein Heydari, Hossein Naderi, <b>Reachsak Ly</b>, Alireza
+          Shojaei
+        </div>
+        <div class="venue">Innovative Higher Education (Submitted)</div>
+      </div>
+
+      <div class="pub-year">2024</div>
+
+      <div class="pub">
+        <div class="ttl">
+          Faculty Development Program to Enhance Teaching Quality in
+          Construction
+        </div>
+        <div class="authors">
+          Saeed Rokooei, Alireza Shojaei, <b>Reachsak Ly</b>
+        </div>
+        <div class="venue">
+          International Journal of Construction Management ·
+          DOI:10.1080/15623599.2024.2304475
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.1080/15623599.2024.2304475">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          DT-DAO: Digital Twin and Blockchain-Based DAO Integration Framework
+          for Smart Building Facility Management
+        </div>
+        <div class="authors">
+          <b>Reachsak Ly</b>, Alireza Shojaei, Hossein Naderi
+        </div>
+        <div class="venue">
+          Construction Research Congress 2024, ASCE, Des Moines, Iowa ·
+          DOI:10.1061/9780784485262.081
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.1061/9780784485262.081">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          From Data to Value: NFT-Powered Framework for Data Exchange of Digital
+          Twins in the AEC Industry
+        </div>
+        <div class="authors">
+          Hossein Naderi, <b>Reachsak Ly</b>, Alireza Shojaei
+        </div>
+        <div class="venue">
+          Construction Research Congress 2024, ASCE, Des Moines, Iowa ·
+          DOI:10.1061/9780784485262.031
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.1061/9780784485262.031">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Assessment of Annoyance from Traffic Noise in a School and a Hospital
+        </div>
+        <div class="authors">
+          Hassan Azad, Alireza Shojaei, <b>Reachsak Ly</b>, Saleh Naseer, Laurie
+          M. Heller
+        </div>
+        <div class="venue">
+          Inter-Noise 2024, Nantes, France · DOI:10.3397/IN_2024_4264
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.3397/IN_2024_4264">DOI</a>
+        </div>
+      </div>
+
+      <div class="pub-year">2023</div>
+
+      <div class="pub">
+        <div class="ttl">
+          Autonomous Construction Safety Incentive Mechanism Using
+          Blockchain-Enabled Tokens and Vision-Based Techniques
+        </div>
+        <div class="authors">
+          Hossein Naderi, Alireza Shojaei, <b>Reachsak Ly</b>
+        </div>
+        <div class="venue">
+          Automation in Construction, Vol. 153 ·
+          DOI:10.1016/j.autcon.2023.104959
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.1016/j.autcon.2023.104959">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Virtual Site Visits in Construction Management Education: A Practical
+          Alternative to Physical Site Visits
+        </div>
+        <div class="authors">
+          Alireza Shojaei, <b>Reachsak Ly</b>, Saeed Rokooei, Amirsamman
+          Mahdavian, Ahmed AlBayati
+        </div>
+        <div class="venue">
+          Journal of Information Technology in Construction (ITcon) ·
+          DOI:10.36680/j.itcon.2023.036
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.36680/j.itcon.2023.036">DOI</a
+          ><a href="#">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub-year">2021</div>
+
+      <div class="pub">
+        <div class="ttl">
+          Continual-Learning-Based Framework for Structural Damage Recognition
+        </div>
+        <div class="authors">
+          Jiawei Zhang, Jiangpeng Shu, <b>Reachsak Ly</b>, Yiran Ji
+        </div>
+        <div class="venue">
+          10th International Conference on Structural Health Monitoring of
+          Intelligent Infrastructure, Porto, Portugal
+        </div>
+        <div class="links"><a href="#">PDF</a></div>
+      </div>
+
+      <div class="pub-year">2020</div>
+
+      <div class="pub">
+        <div class="ttl">
+          Image-Based Structural Damage Recognition Using Deep Convolutional
+          Neural Networks
+        </div>
+        <div class="authors">
+          Jiawei Zhang, <b>Reachsak Ly</b>, Weijian Zhao, Yunyi Liu
+        </div>
+        <div class="venue">
+          fib Symposium 2020 — Concrete Structures for Resilient Society,
+          Shanghai, China
+        </div>
+        <div class="links"><a href="#">PDF</a></div>
+      </div>
+
+      <hr />
+
+      <!-- ============ REPORTS / POSTERS ============ -->
+      <h3 class="sec">Reports</h3>
+      <h2 class="sec-title">Research Reports &amp; Posters</h2>
+
+      <div class="pub">
+        <div class="ttl">
+          Autonomous Building Operations and Virtual Assistants Using Generative
+          AI
+        </div>
+        <div class="authors"><b>Reachsak Ly</b></div>
+        <div class="venue">
+          Poster · 2025 Paul E. Torgersen Graduate Student Research Excellence
+          Award, Virginia Tech, Blacksburg, VA
+        </div>
+        <div class="links"><a href="#">PDF</a></div>
+      </div>
+
+      <div class="pub">
+        <div class="ttl">
+          Investigation of Gender and Racial Diversity in U.S. Construction
+          Higher Education
+        </div>
+        <div class="authors">
+          <b>Reachsak Ly</b>, Mohammad Hossein Heydari, Hossein Naderi, Josh
+          Iorio, Alireza Shojaei
+        </div>
+        <div class="venue">Research Report, 2024</div>
+        <div class="links"><a href="#">PDF</a></div>
+      </div>
+
+      <hr />
+
+      <footer>© 2026 Reachsak Ly</footer>
+    </div>
+  </body>
+</html>
